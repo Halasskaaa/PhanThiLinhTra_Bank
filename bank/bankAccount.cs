@@ -1,5 +1,4 @@
-﻿using bank;
-using Bank;
+﻿using Bank;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,4 @@
-﻿using bank;
+﻿using Bank;
 using System;
 using System.Buffers;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Bank
 
 		public string CardNumber { get; }
 		public double AccountBalance { get; }
-		public BankCard(Owner ownerm double accountBalance, string cardNumber)
+		public BankCard(Owner owner, double accountBalance, string cardNumber) : base(owner)
 		{
 			this.accountBalance = accountBalance;
 			this.cardNumber = cardNumber;
@@ -25,6 +25,7 @@ namespace Bank
 		{
 			if (accountBalance - amount >= 0)
 			{
+				accountBalance -= amount;
 				return true;
 			}
 			return false;

@@ -21,7 +21,7 @@ namespace Bank
 			{
 				return new SavingsAccount(owner);
 			}
-			if (creditLimit < 0)
+			else 
 			{
 				return new CreditAccount(owner, creditLimit);
 			}
@@ -45,9 +45,9 @@ namespace Bank
             for (int i = 0; i < accounts.Length; i++)
             {
 				if (accounts[i].Balance > maxBankAccount.Balance) maxBankAccount = accounts[i];
-				return maxBankAccount;
 			}
-        }
+			return maxBankAccount;
+		}
 
 		public double TotalCredit(Owner owner)
 		{

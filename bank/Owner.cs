@@ -5,23 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bank
+namespace Bank
 {
-	internal abstract class BankAccount : BankingService
+	internal sealed class Owner
 	{
-		double balance;
-		public double Balance { get; }
-
-		protected BankAccount(Owner owner) : base(owner)
-		{
-		}
-
-		public void Deposit(double amount)
-		{
-			balance += amount;
-		}
-
-		public abstract bool Withdraw(double amount);
+		public string Name { get; set; }
 
 
 	}

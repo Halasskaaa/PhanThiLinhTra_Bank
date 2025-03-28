@@ -19,7 +19,9 @@ namespace Bank
 			if (this.Balance - amount >= creditLimit)
 			{
 				this.Balance -= amount;
+				return true;
 			}
+			return false;
 		}
 	}
 }
