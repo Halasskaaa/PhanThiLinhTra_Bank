@@ -1,4 +1,4 @@
-﻿using bank;
+﻿using Bank;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +10,11 @@ namespace Bank
 	internal abstract class BankAccount : BankingService
 	{
 		double balance;
-		public double Balance{ get; }
+		public double Balance{ get; protected set; }
 
 		protected BankAccount(Owner owner) : base(owner) 
 		{ 
+
 		}
 
 		public void Deposit(double amount)

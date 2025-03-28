@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bank;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,22 @@ using System.Threading.Tasks;
 
 namespace bank
 {
-	internal sealed class Owner
+	internal abstract class BankAccount : BankingService
 	{
-		public String Name { get ; set ; }
-	
+		double balance;
+		public double Balance { get; }
+
+		protected BankAccount(Owner owner) : base(owner)
+		{
+		}
+
+		public void Deposit(double amount)
+		{
+			balance += amount;
+		}
+
+		public abstract bool Withdraw(double amount);
+
+
 	}
 }
