@@ -1,4 +1,4 @@
-﻿namespace bank
+﻿namespace Bank
 {
 	internal class Program
 	{

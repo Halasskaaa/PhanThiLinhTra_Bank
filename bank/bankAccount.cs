@@ -1,4 +1,5 @@
-﻿using Bank;
+﻿using bank;
+using Bank;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,6 @@ namespace Bank
 
 		protected BankAccount(Owner owner) : base(owner) 
 		{ 
-
 		}
 
 		public void Deposit(double amount)
@@ -24,6 +24,10 @@ namespace Bank
 
 		public abstract bool Withdraw(double amount);
 
+		public BankCard NewCard(string cardNumber)
+		{
+			return new BankCard(Owner, Balance, cardNumber);
+		}
 
 	}
 }
