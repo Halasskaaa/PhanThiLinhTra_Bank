@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace bank
 {
-	internal sealed class Owner
+	internal class BankService : Owner
 	{
-		public string Name { get ; set ; }
-	
+
 	}
 }
